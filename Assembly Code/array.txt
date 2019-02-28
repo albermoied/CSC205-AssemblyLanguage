@@ -1,0 +1,10 @@
+INVOKE printf, ADDR msg2fmt, ADDR msg3
+		mov ecx,n
+		sub ebx,4
+		for02:	nop
+				push ecx
+				INVOKE printf, ADDR msg3fmt,arry[ebx]
+				pop ecx
+				sub ebx,4
+				loop for02
+				jmp endif01
